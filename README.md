@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# global-insight-dashboard
+A responsive web application built to consume the public REST Countries API, allowing users to search, filter, and compare country metrics side-by-side. Designed with high resilience against network latencies and malicious inputs.
 
-## Getting Started
+# Global Insight: Country Comparison & Resilience Dashboard
 
-First, run the development server:
+A modern, responsive, and resilient single-page web application built to consume the public REST Countries API. The application enables users to search for world countries, view detailed metrics, and perform side-by-side comparisons in an interactive UI dashboard. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The core highlight of this project is its strict adherence to application resilience—gracefully handling network throttling, server errors, and untrusted user inputs.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Live on Production / Local Run Steps
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Follow these instructions to boot and run the project locally on a completely fresh machine:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
+- Ensure you have **Node.js** installed (Version `18.0.0` or higher is recommended).
+- A package manager like `npm` (comes bundled with Node.js).
 
-## Learn More
+### Installation Steps
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the Repository:**
+   ```bash
+   git clone <your-github-repo-url>
+   cd <your-repo-folder-name>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install Dependencies:**
+Install required packages (including lucide-react for responsive dashboard iconography and Tailwind CSS setups).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    npm install
+    npm install lucide-react
 
-## Deploy on Vercel
+3. **Run the Local Development Server:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash 
+    npm run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. **Access the Application:**
+
+    Open your preferred browser and navigate to:
+    http://localhost:3000
+
+💡 **API Key Setup Notice:**
+-
+This application utilizes the public, open-access instance of https://restcountries.com/. It requires zero API Keys or .env credential tokens, ensuring immediate, friction-free setup and evaluation for the reviewer.
+
+✨**Key Features**
+-
+Semantic Text Search: Instant lookup of countries by common or official names.
+
+Side-by-Side Comparison Slot: Pin up to two countries dynamically to contrast crucial socio-economic metrics (Population, Area, Currencies, Regions).
+
+Graceful Network Timeout Layer: Halts freezing requests if the API server undergoes high lag.
+
+Strict Input Validation: Rejects destructive characters before creating network requests.
